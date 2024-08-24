@@ -117,14 +117,24 @@ const ChannelPage = (props: RouteComponentProps) => {
     if (!keys) return null;
 
     if (!ravenStatus.ready) {
-        return <Box sx={{display: 'flex', alignItems: 'center'}}>
-            <CircularProgress size={20} sx={{mr: '8px'}}/> {t('Loading...')}
+        return <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+
+<Box sx={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center',flexDirection: 'column'}}>
+<Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center',flexDirection: 'column', paddingBottom:'24px'}}>
+        <Box component='img' src='/logo-large-white.png' sx={{
+            maxWidth: '60%',
+            width: '600px',
+        }}/>
+</Box>
+            <Box sx={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px'}}><CircularProgress size={16} sx={{mr: '8px'}}/>&nbsp;&nbsp;{t('Loading DogeChat...')}</Box>
+            </Box>
+
         </Box>;
     }
 
     if (!cid) {
         return <>
-            <Helmet><title>{t('NostrChat')}</title></Helmet>
+            <Helmet><title>{t('DogeChat')}</title></Helmet>
             <AppWrapper>
                 <AppMenu/>
                 <AppContent>
@@ -145,7 +155,7 @@ const ChannelPage = (props: RouteComponentProps) => {
 
     if (!channel) {
         return <>
-            <Helmet><title>{t('NostrChat')}</title></Helmet>
+            <Helmet><title>{t('DogeChat')}</title></Helmet>
             <AppWrapper>
                 <AppMenu/>
                 <AppContent>
@@ -188,7 +198,7 @@ const ChannelPage = (props: RouteComponentProps) => {
 
     if (!ravenStatus.syncDone) {
         return <>
-            <Helmet><title>{t(`NostrChat - ${channel.name}`)}</title></Helmet>
+            <Helmet><title>{t(`DogeChat - ${channel.name}`)}</title></Helmet>
             <AppWrapper>
                 <AppMenu/>
                 <AppContent>
@@ -212,7 +222,7 @@ const ChannelPage = (props: RouteComponentProps) => {
 
 
     return <>
-        <Helmet><title>{t(`NostrChat - ${channel.name}`)}</title></Helmet>
+        <Helmet><title>{t(`DogeChat - ${channel.name}`)}</title></Helmet>
         <AppWrapper>
             <AppMenu/>
             <AppContent divide={!!threadRoot}>

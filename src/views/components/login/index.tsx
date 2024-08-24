@@ -91,8 +91,8 @@ const Login = (props: { onDone: () => void }) => {
 
     return <>
         <Box component="img" src="/logo-large-white.png" sx={{
-            width: isSm ? '526px' : '100%',
-            height: isSm ? '132px' : null,
+            width: isSm ? '525px' : '100%',
+            height: isSm ? '118px' : null,
             m: '20px 0 10px 0'
         }}/>
         <Divider sx={{m: '28px 0'}}/>

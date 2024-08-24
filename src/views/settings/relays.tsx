@@ -168,7 +168,7 @@ const SettingsRelaysPage = (_: RouteComponentProps) => {
     }
 
     return <>
-        <Helmet><title>{t('NostrChat - Relays')}</title></Helmet>
+        <Helmet><title>{t('DogeChat - Relays')}</title></Helmet>
         <AppWrapper>
             <SettingsMenu/>
             <AppContent>

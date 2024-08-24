@@ -36,7 +36,7 @@ const ChannelCard = (props: { channel: Channel, onJoin: () => void }) => {
             </>
         )}
         <Box sx={{
-            fontFamily: 'Faktum, sans-serif',
+            fontFamily: 'Comic Neue, sans-serif',
             fontSize: '1.1em',
         }}>{truncate(channel.name, 60)}</Box>
         <Divider sx={{m: '12px 0'}}/>

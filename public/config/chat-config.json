@@ -1,0 +1,58 @@
+{
+    "updatedAt": "2024-08-24T03:21:11.699Z",
+    "version": "0.1.0",
+    "motd": "Welcome to DogeChat - A place for dogecoin enthusiasts to chat and share ideas.",
+    "blockedWords": [
+        "/t.me/"
+    ],
+    "allowedLinkHostnames": [
+        "github.com",
+        "www.github.com",
+        "gist.github.com",
+        "qedprotocol.com",
+        "www.qedprotocol.com",
+        "blog.qedprotocol.com",
+        "gitlab.com",
+        "www.gitlab.com",
+        "bitbucket.org",
+        "www.bitbucket.org",
+        "*.qed.me",
+        "*.doge.toys"
+    ],
+    "allowedImageHostnames": [
+        "*.qed.me"
+    ],
+    "allowedVideoHostnames": [
+        "*.qed.me"
+    ],
+    "userDefs": [
+        {
+            "id": "c3ee95cac6806bdbd2262e8f486c81ec0d2420c6bfeff34f02c54d41f3c5c731",
+            "verifiedGroups": ["staff"],
+            "role": "admin",
+            "verifiedDescription": "Creator of DogeChat",
+            "github": "cf",
+            "twitter": "cmepeq",
+            "profileNameClass": "staff",
+            "inlineIcon": "staff_verified"
+        }
+    ],
+    "defaultChannels": [
+        {
+            "id": "d6e3172b630ef52fe07e922f54678028213676579eb73ef36a1bc3bfc24e101c",
+            "name": "Dogecoin Core",
+            "description": "Discuss all things related to Dogecoin Core Development",
+            "creator": "c3ee95cac6806bdbd2262e8f486c81ec0d2420c6bfeff34f02c54d41f3c5c731",
+            "created": 1678198928,
+            "picture": ""
+        },
+        {
+            "id": "35a06e207f4fdcc2aae311bcf2d237c14b58dd6991a7ecaacd8238f61f88f90f",
+            "name": "Dogecoin Ecosystem Dev",
+            "description": "Discuss any Dogecoin Ecosystem development topics here including SDKs, Wallets, Indexers and Layer 2s",
+            "creator": "c3ee95cac6806bdbd2262e8f486c81ec0d2420c6bfeff34f02c54d41f3c5c731",
+            "created": 1724475440,
+            "picture": ""
+        }
+    ]
+}

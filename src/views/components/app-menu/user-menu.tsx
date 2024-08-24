@@ -61,7 +61,7 @@ const UserMenu = () => {
                 if (profile?.name) {
                     return <Box sx={{
                         ...sx,
-                        fontFamily: 'Faktum, sans-serif',
+                        fontFamily: 'Comic Neue, sans-serif',
                         fontWeight: 'bold',
 
                     }}>{profile.name || ''}</Box>

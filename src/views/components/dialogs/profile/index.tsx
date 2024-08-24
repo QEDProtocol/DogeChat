@@ -102,7 +102,7 @@ const ProfileDialog = (props: { profile?: Profile, pubkey: string, onDM: () => v
                     </Box>
                 </Box>
                 <Box sx={{textAlign: 'center', mt: '12px'}}>
-                    {profileName && (<Box sx={{mb: '10px', fontWeight: 600, fontSize: '1.2em'}}>{profileName}</Box>)}
+                    {profileName && (<Box sx={{mb: '10px', fontWeight: 600, fontSize: '1.2em'}} className="profileName">{profileName}</Box>)}
                     {profile?.about && (
                         <Box sx={{
                             mb: '10px',

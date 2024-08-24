@@ -42,7 +42,7 @@ const ChannelList = () => {
             justifyContent: 'space-between'
         }}>
             <Box sx={{
-                fontFamily: 'Faktum, sans-serif',
+                fontFamily: 'Comic Neue, sans-serif',
                 fontWeight: 'bold',
                 color: theme.palette.primary.dark,
             }}>{t('Channels')}</Box>

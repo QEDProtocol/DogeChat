@@ -19,7 +19,8 @@ import ProfileDialog from 'views/components/dialogs/profile';
 import MessageReactions from 'views/components/message-reactions';
 import MessageMenuWeb from 'views/components/message-menu/web';
 import MessageMobileMobile from 'views/components/message-menu/mobile';
-import {activeMessageAtom, profilesAtom, threadRootAtom, spammersAtom} from 'atoms';
+import ProfileName from 'views/components/profile-name';
+import {activeMessageAtom, profilesAtom, threadRootAtom, spammersAtom, dogeChatConfigAtom} from 'atoms';
 import {Message,} from 'types';
 import {formatMessageTime, formatMessageFromNow, formatMessageDateTime} from 'helper';
 import ChevronRight from 'svg/chevron-right';
@@ -37,6 +38,7 @@ const MessageView = (props: { message: Message, compactView: boolean, dateFormat
     const [threadRoot, setThreadRoot] = useAtom(threadRootAtom);
     const [activeMessage] = useAtom(activeMessageAtom);
     const [spammers] = useAtom(spammersAtom);
+    const [dogeChatConfig] = useAtom(dogeChatConfigAtom);
     const [t] = useTranslation();
     const [, showModal] = useModal();
     const {isMd} = useMediaBreakPoint();
@@ -53,7 +55,8 @@ const MessageView = (props: { message: Message, compactView: boolean, dateFormat
     const canTouch = styles.canTouch();
     const canHover = styles.canHover();
     const [showSpammer, setShowSpammer] = useState<boolean>(false);
-    const isSpammer = spammers[message.creator] !== undefined;
+    const userDef = dogeChatConfig?dogeChatConfig.getUserById(message.creator):{id: message.creator};
+    const isSpammer = (spammers[message.creator] !== undefined) || (!!userDef.blocked) || (!!userDef.spammer);
     const renderedBody = useMemo(() => {
         const sx = {
             fontSize: '.8em',
@@ -186,11 +189,11 @@ const MessageView = (props: { message: Message, compactView: boolean, dateFormat
                 mr: '12px',
                 mb: '12px'
             }}>
-                <Box onClick={profileClicked} sx={{
+                <Box onClick={profileClicked} className="profileName" sx={{
                     fontWeight: '600',
                     mr: '5px',
                     cursor: 'pointer'
-                }}>{profileName}</Box>
+                }}><ProfileName profileName={profileName} userDef={userDef} /></Box>
                 <Tooltip title={messageDateTime} placement="right">
                     <Box sx={{
                         color: darken(theme.palette.text.secondary, 0.3),
@@ -257,6 +260,7 @@ const MessageView = (props: { message: Message, compactView: boolean, dateFormat
             {mobileMenu && <MessageMobileMobile
                 message={message}
                 profileName={profileName}
+                userDef={userDef}
                 inThreadView={inThreadView}
                 onClose={() => {
                     setMobileMenu(false);

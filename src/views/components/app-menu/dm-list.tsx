@@ -68,7 +68,7 @@ const DmList = () => {
             justifyContent: 'space-between'
         }}>
             <Box sx={{
-                fontFamily: 'Faktum, sans-serif',
+                fontFamily: 'Comic Neue, sans-serif',
                 fontWeight: 'bold',
                 color: theme.palette.primary.dark,
 
@@ -102,7 +102,7 @@ const DmList = () => {
                     color: theme.palette.primary.dark,
                     fontSize: '85%',
                     opacity: '0.6',
-                }}>{t('No direct message')}</Box>
+                }}>{t('No direct messages found~')}</Box>
             }
 
             return theList.map(p => <DmListItem key={p.npub} contact={p}/>);

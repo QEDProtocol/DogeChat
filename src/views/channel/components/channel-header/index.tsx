@@ -35,7 +35,7 @@ const ChannelHeader = () => {
         )}
         <Box sx={{flexGrow: 1, minWidth: 0}}>
             <Box sx={{
-                fontFamily: 'Faktum, sans-serif',
+                fontFamily: 'Comic Neue, sans-serif',
                 ...styles.ellipsis
             }}>
                 {channel.name}

@@ -32,7 +32,8 @@ const useStyles = () => {
             overflowX: 'hidden'
         },
         sideBarWidth: '270px',
-        sideBarFooterHeight: '50px',
+        sideBarFooterHeight: '60px',
+        sideBarFooterImageHeight: '40px',
         headerHeight: '88px'
     }
 }

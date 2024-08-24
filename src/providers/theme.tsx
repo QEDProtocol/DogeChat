@@ -22,7 +22,7 @@ const themes = {
             mode: 'dark',
             divider: 'rgba(255, 255, 255, 0.08)',
             primary: {
-                main: '#7166FF',
+                main: '#ffdd2d',
                 dark: 'rgb(132, 132, 132)',
             },
             error: {
@@ -39,7 +39,7 @@ const themes = {
         },
         typography: {
             allVariants: {
-                fontFamily: 'Inter, sans-serif'
+                fontFamily: '"Comic Neue", "Comic Sans MS", sans-serif'
             },
             button: {
                 textTransform: 'none'

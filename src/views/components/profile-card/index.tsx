@@ -41,7 +41,7 @@ const ProfileCard = (props: { profile: Profile, pub: string, onDM: () => void })
             <Avatar src={profile?.picture} seed={pub} size={140} rounded/>
         </Box>
         {(profile.name || nip05Verified) && (<Box sx={{
-            fontFamily: 'Faktum, sans-serif',
+            fontFamily: 'Comic Neue, sans-serif',
             fontSize: '1.1em',
             display: 'flex',
             alignItems: 'center',

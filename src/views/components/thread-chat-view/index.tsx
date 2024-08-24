@@ -56,7 +56,7 @@ const ThreadChatView = (props: { senderFn: (message: string, mentions: string[])
                 alignItems: 'center',
                 p: '0 20px'
             }}>
-                <Box sx={{fontFamily: 'Faktum, sans-serif'}}>
+                <Box sx={{fontFamily: 'Comic Neue, sans-serif'}}>
                     {t('Thread')}
                 </Box>
                 <IconButton onClick={() => {

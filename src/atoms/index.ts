@@ -18,6 +18,7 @@ import {
 } from 'types';
 import {GLOBAL_CHAT} from 'const';
 import Raven from 'raven/raven';
+import type { DogeChatConfig } from 'util/dogeChatConfig';
 
 export * from 'atoms/ui';
 
@@ -48,3 +49,4 @@ export const activeMessageAtom = atom<string | null>(null);
 export const readMarkMapAtom = atom<ReadMarkMap>({});
 export const showRequestsAtom = atom<boolean>(false);
 export const spammersAtom = atom<Record<string, number>>({});
+export const dogeChatConfigAtom = atom<DogeChatConfig | null>(null);

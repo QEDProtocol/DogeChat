@@ -14,34 +14,68 @@ body {
 }
 
 
+/* comic-neue-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 300;
+  src: url('assets/fonts/ComicNeue/comic-neue-v8-latin-300.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/ComicNeue/comic-neue-v8-latin-300.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* comic-neue-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comic Neue';
+  font-style: italic;
+  font-weight: 300;
+  src: url('assets/fonts/ComicNeue/comic-neue-v8-latin-300italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/ComicNeue/comic-neue-v8-latin-300italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* comic-neue-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/ComicNeue/comic-neue-v8-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/ComicNeue/comic-neue-v8-latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* comic-neue-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comic Neue';
+  font-style: italic;
+  font-weight: 400;
+  src: url('assets/fonts/ComicNeue/comic-neue-v8-latin-italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/ComicNeue/comic-neue-v8-latin-italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* comic-neue-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comic Neue';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/ComicNeue/comic-neue-v8-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/ComicNeue/comic-neue-v8-latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* comic-neue-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Comic Neue';
+  font-style: italic;
+  font-weight: 700;
+  src: url('assets/fonts/ComicNeue/comic-neue-v8-latin-700italic.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url('assets/fonts/ComicNeue/comic-neue-v8-latin-700italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Comic Neue', 'Comic Sans MS', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@font-face {
-  font-weight: 400;
-  font-family: 'Faktum';
-  font-style: normal;
-  src: url('assets/fonts/faktum/FaktumWideMedium.otf') format('opentype'),
-  url('assets/fonts/faktum/FaktumWideMedium.woff') format('woff'),
-  url('assets/fonts/faktum/FaktumWideMedium.woff2') format('woff2');
-  font-display: block;
-}
-
-@font-face {
-  font-weight: 600;
-  font-family: 'Faktum';
-  font-style: normal;
-  src: url('assets/fonts/faktum/FaktumWideSemiBold.otf') format('opentype'),
-  url('assets/fonts/faktum/FaktumWideSemiBold.woff') format('woff'),
-  url('assets/fonts/faktum/FaktumWideSemiBold.woff2') format('woff2');
-  font-display: block;
-}
-
 #root {
   height: 100%;
 }
@@ -82,4 +116,37 @@ em-emoji-picker {
   .mention {
     color: #FFD60A;
   }
+}
+
+.message {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profileName {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profileNameGithub, a.profileNameGithub:visited {
+  display: inline;
+  color:inherit;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-weight: 500;
+  font-size:0.9em;
+  text-decoration: none;
+  margin-left: 4px;
+  padding:2px 6px;
+  border-radius: 3px;
+  background:rgba(200,200,200,0.25);
+  color:#fff;
+
+  .profileGithubIcon {
+    height:0.75em;
+    padding-right:0.35em;
+  }
+}
+
+.MuiDialog-paper {
+  background:#1f1f1f;
+  background-image: none !important;
 }

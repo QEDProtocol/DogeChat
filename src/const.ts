@@ -15,11 +15,11 @@ export const ACCEPTABLE_LESS_PAGE_MESSAGES = 5;
 export const SCROLL_DETECT_THRESHOLD = 5;
 
 export const GLOBAL_CHAT: Channel = {
-    id: 'f412192fdc846952c75058e911d37a7392aa7fd2e727330f4344badc92fb8a22',
-    name: 'Global Chat',
-    about: 'Whatever you want it to be, just be nice',
+    id: 'd6e3172b630ef52fe07e922f54678028213676579eb73ef36a1bc3bfc24e101c',
+    name: 'Dogecoin Core',
+    about: 'Discuss all things related to Dogecoin Core Development',
     picture: '',
-    creator: 'aea59833635dd0868bc7cf923926e51df936405d8e6a753b78038981c75c4a74',
+    creator: 'c3ee95cac6806bdbd2262e8f486c81ec0d2420c6bfeff34f02c54d41f3c5c731',
     created: 1678198928
 };
 

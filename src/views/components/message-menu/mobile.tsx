@@ -20,16 +20,18 @@ import CopyToClipboard from 'components/copy-clipboard';
 import EmojiPicker from 'components/emoji-picker';
 import ConfirmDialog from 'components/confirm-dialog';
 import MessageReactions from 'views/components/message-reactions';
+import ProfileName from 'views/components/profile-name';
 import {Message} from 'types';
 import {formatMessageDateTime, formatMessageTime} from 'helper';
 import MessageReplyText from 'svg/message-reply-text';
 import ContentCopy from 'svg/content-copy';
 import EyeOff from 'svg/eye-off';
 import Close from 'svg/close';
+import { IUserDefV1 } from 'util/dogeChatConfig';
 
 
-const MessageMobileView = (props: { message: Message, profileName: string, inThreadView?: boolean, onClose: () => void }) => {
-    const {message, profileName, inThreadView, onClose} = props;
+const MessageMobileView = (props: { message: Message, profileName: string, userDef?: IUserDefV1, inThreadView?: boolean, onClose: () => void }) => {
+    const {message, profileName, userDef, inThreadView, onClose} = props;
     const theme = useTheme();
     const renderer = useContentRenderer();
     const [raven] = useAtom(ravenAtom);
@@ -184,9 +186,9 @@ const MessageMobileView = (props: { message: Message, profileName: string, inThr
                 borderRadius: '6px'
             }}>
                 <Box sx={{display: 'flex', alignItems: 'center', fontSize: '.7em',}}>
-                    <Box sx={{
+                    <Box className="profileName" sx={{
                         mr: '5px',
-                    }}>{profileName}</Box>
+                    }}><ProfileName profileName={profileName} userDef={userDef} /></Box>
                     <Tooltip title={messageDateTime} placement="bottom-start" enterTouchDelay={500}>
                         <Box sx={{
                             color: darken(theme.palette.text.secondary, 0.3),

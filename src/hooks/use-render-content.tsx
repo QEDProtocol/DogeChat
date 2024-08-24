@@ -18,6 +18,27 @@ import {notEmpty} from 'util/misc';
 const imgReg = /(https:\/\/)([^\s(["<,>/]*)(\/)[^\s[",><]*(.png|.jpg|.jpeg|.gif|.webp)(\?[^\s[",><]*)?/;
 const channelReg = new RegExp(`^${window.location.protocol}//${window.location.host}/channel/[a-f0-9]{64}$`, 'm');
 
+const ALLOWED_LINK_DOMAINS = [
+    'dogechat.org',
+    'www.dogechat.org',
+    'github.com',
+    'www.github.com',
+    'gist.github.com',
+    'gitlab.com',
+    'www.gitlab.com',
+    'qedprotocol.com',
+    'www.qedprotocol.com',
+    'doge-testnet-explorer.qed.me',
+    'doge-explorer.qed.me',
+];
+
+function isValidLink(url: string){
+    if(url.indexOf('https://') !== 0) return false;
+    const parsed = new URL(url);
+    if(ALLOWED_LINK_DOMAINS.includes(parsed.hostname)) return true;
+    return false;
+}
+
 const useRenderContent = () => {
     const [, showModal] = useModal();
     const styles = useStyles();
@@ -29,6 +50,7 @@ const useRenderContent = () => {
 
         const renderLink = (args: IntermediateRepresentation) => {
             const {href} = args.attributes;
+            if(!isValidLink(href)) return <span className='badLink'>[Link Removed]</span>;
 
             if (href.match(channelReg)) {
                 const s = href.split('/');

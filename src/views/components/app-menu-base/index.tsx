@@ -56,17 +56,18 @@ const AppMenuBase = (props: { children: React.ReactNode }) => {
             </Box>
             <Box sx={{
                 height: styles.sideBarFooterHeight,
-                pt: '10px',
+                p: '4px 0px 16px 0px',
                 flexShrink: 0,
                 display: 'flex',
+                opacity: 0.5,
                 fontSize: '0.8em',
-                color: theme.palette.text.disabled
+                color: theme.palette.text.disabled,
+                justifyContent: 'center',
             }}>
-                <Box sx={{mr: '20px'}}>{`NostrChat v${pack.version}`}</Box>
-                <Box component="a" href="https://github.com/NostrChat/NostrChat" target="_blank" rel="noreferrer"
-                     sx={{color: theme.palette.text.secondary}}>
-                    <Github height={20} style={{marginRight: '4px'}}/>
-                </Box>
+            <Box component="img" src="/logo-large-white.png" sx={{
+                maxHeight: styles.sideBarFooterImageHeight,
+                maxWidth: '100%',
+            }}/>
             </Box>
         </Box>
     </Box>
